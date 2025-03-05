@@ -25,5 +25,10 @@ namespace Kalendage
             int centerX = (tabPage1.ClientSize.Width - TitleLabel.Width) / 2;
             TitleLabel.Location = new Point(centerX, centerY);
         }
+
+        private void tabPage1_Resize(object sender, EventArgs e)
+        {
+            CenterTitleLabel();
+        }
     }
 }
