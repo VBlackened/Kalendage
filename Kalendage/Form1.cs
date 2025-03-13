@@ -15,20 +15,16 @@ namespace Kalendage
         public Form1()
         {
             InitializeComponent();
-            CenterTitleLabel();
+            CenterXTitleLabel();
         }
      
 
-        private void CenterTitleLabel()
+        private void CenterXTitleLabel()
         {
-            int centerY = (tabPage1.ClientSize.Height - TitleLabel.Height) / 2;
-            int centerX = (tabPage1.ClientSize.Width - TitleLabel.Width) / 2;
-            TitleLabel.Location = new Point(centerX, centerY);
+            //int centerY = (tabPage1.ClientSize.Height - TitleLabel.Height) / 2;
+            int centerX = (panel1.ClientSize.Width - TitleLabel.Width) / 2;
+            TitleLabel.Location = new Point(centerX);
         }
 
-        private void tabPage1_Resize(object sender, EventArgs e)
-        {
-            CenterTitleLabel();
-        }
     }
 }
